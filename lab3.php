@@ -1,4 +1,5 @@
 <?php
+
     $totalArray = array();
     $deck = array();
     $p1Hand = array();
@@ -58,11 +59,12 @@
             }
                  
                 echo "<img src='img/cards/$suit/" . $card. ".png' />";
+
                 echo " ";
             }
+    
     }
-    
-    
+
     function drawHand($playerNum)
     {
         global $totalArray, $p1Hand,$p2Hand,$p3Hand,$p4Hand, $deck;
@@ -153,13 +155,16 @@
         $tempScore=0;
         $tempName = array(null, null, null, null);
         $tie = false;
+
         for($i = 1; $i <= 52; $i++)
         {
             $deck[] = $i;
         }
         
         $playerNames = array("Austin","Sean","Shrek","Donkey");
+
         shuffle($playerNames);
+
         shuffle($deck);
         for($i = 0; $i < 4; $i++)
         {
@@ -226,12 +231,12 @@
     }
     
     
-    
-    
-    
-    
-    
+
+
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html>
@@ -240,7 +245,9 @@
         <link rel="stylesheet" href="css/lab3.css" type="text/css" />
     </head>
     <body>
+
         <h1> Silverjack </h1>
+
           <?=playGame()?>
     </body>
 </html>
